@@ -13,12 +13,14 @@ public class Solution {
     // Complete the minimumSwaps function below.
     static int minimumSwaps(int[] arr)
     {
+        //Create a boolean array with the same size as the input array.
         int swap=0;
         boolean visited[]=new boolean[arr.length];
 
         for(int i=0;i<arr.length;i++){
             int j=i,cycle=0;
 
+            //If visited[j] isnt true, make it true, add cycle.
             while(!visited[j]){
                 visited[j]=true;
                 j=arr[j]-1;
